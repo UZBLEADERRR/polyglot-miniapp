@@ -1,8 +1,12 @@
 name: Telegram bot
 
+# Avtomatik (cron) ishga tushish o'chirildi — har 5 daqiqada xato bilan
+# tugab, bildirishnoma yuborayotgan edi. Botni qo'lda ishga tushirish uchun:
+# Actions -> Telegram bot -> Run workflow.
+# Qayta yoqish uchun quyidagi izohni oching:
+#   schedule:
+#     - cron: '*/5 * * * *'
 on:
-  schedule:
-    - cron: '*/5 * * * *'   # har 5 daqiqada yangi xabarlarni oladi
   workflow_dispatch:
 
 permissions:
